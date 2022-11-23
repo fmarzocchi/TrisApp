@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class page_iniziale extends AppCompatActivity implements View.OnClickListener {
+public class PageIniziale extends AppCompatActivity implements View.OnClickListener {
     Button pvscpu,pvsp;
 
     @Override
@@ -24,8 +24,8 @@ public class page_iniziale extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        Intent i=new Intent(page_iniziale.this,difficolta.class);
-        Intent j=new Intent(page_iniziale.this,inserireNomi.class);
+        Intent i=new Intent(PageIniziale.this, Difficolta.class);
+        Intent j=new Intent(PageIniziale.this, InserireNomi.class);
         switch (v.getId()){
             case R.id.p_vs_cpu:
                 startActivity(i);

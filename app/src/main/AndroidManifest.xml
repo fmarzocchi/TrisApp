@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tris20">
-        <activity android:name=".difficolta"></activity>
-        <activity android:name=".inserireNomi" />
-        <activity android:name=".pVsP" />
-        <activity android:name=".page_iniziale" >
+        <activity android:name=".Difficolta"></activity>
+        <activity android:name=".InserireNomi" />
+        <activity android:name=".PlayerVsPlayer" />
+        <activity android:name=".PageIniziale" >
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
-        <activity android:name=".pVsCpu"/>
+        <activity android:name=".PlayerVsCpu"/>
 
     </application>
 

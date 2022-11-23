@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class inserireNomi extends AppCompatActivity implements View.OnClickListener {
+public class InserireNomi extends AppCompatActivity implements View.OnClickListener {
     EditText gio1,gio2;
     Button gioca;
 
@@ -28,15 +28,15 @@ public class inserireNomi extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent i=new Intent(inserireNomi.this,pVsP.class);
+        Intent i=new Intent(InserireNomi.this, PlayerVsPlayer.class);
         String g1=gio1.getText().toString();
         String g2=gio2.getText().toString();
         if(v.getId()==(R.id.gioca)){
-            if(gio1.getText().toString().equals("")&&gio2.getText().toString().equals("") ){
+            if(g1.equals("") && g2.equals("") ){
                 Toast.makeText(getApplicationContext(),"Inserire il nome del Giocatore 1 e del Giocatore 2",Toast.LENGTH_SHORT).show();
-            }else if(gio1.getText().toString().equals("")){
+            }else if(g1.equals("")){
                 Toast.makeText(getApplicationContext(),"Inserire il nome del Giocatore 1 ",Toast.LENGTH_SHORT).show();
-            }else if(gio2.getText().toString().equals("")){
+            }else if(g2.equals("")){
                 Toast.makeText(getApplicationContext(),"Inserire il nome del Giocatore 2 ",Toast.LENGTH_SHORT).show();
             }else {
                 i.putExtra("nomeG1", g1);

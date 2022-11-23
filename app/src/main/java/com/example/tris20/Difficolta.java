@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class difficolta extends AppCompatActivity implements View.OnClickListener {
+public class Difficolta extends AppCompatActivity implements View.OnClickListener {
     Button facile,medio,difficile;
+    public static final String CHANCESTUPIDCHOICE = "com.example.tris20.difficolta";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,18 +27,18 @@ public class difficolta extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        Intent i=new Intent(difficolta.this,pVsCpu.class);
+        Intent i=new Intent(Difficolta.this, PlayerVsCpu.class);
         switch (v.getId()){
             case R.id.facile:
-                i.putExtra("livello",25);
+                i.putExtra(CHANCESTUPIDCHOICE,70);
                 startActivity(i);
                 break;
             case R.id.medio:
-                i.putExtra("livello",60);
+                i.putExtra(CHANCESTUPIDCHOICE,35);
                 startActivity(i);
                 break;
             case R.id.difficile:
-                i.putExtra("livello",100);
+                i.putExtra(CHANCESTUPIDCHOICE,0);
                 startActivity(i);
                 break;
         }
